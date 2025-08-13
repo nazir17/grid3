@@ -1,78 +1,90 @@
 .nav {
-  display: grid;
-  height: 5vh;
   width: 100%;
   background-color: #222;
-  box-sizing: border-box;
+  padding: 10px 0;
+  color: white;
+  
 }
-
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  width: 100%;
-  max-width: 1200px;
-  /* margin: auto; */
-  padding: 10px;
-  color: white;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-
-.pageheader {
-    margin: 1%;
-}
 .pageheader h1 {
-    font-size: 24px;
+  font-size: 24px;
+  margin: 20px 0;
+  justify-content: center;
 }
 .pageheader span {
-    font-size: 16px;
-    color: #777;
+  font-size: 16px;
+  color: #777;
 }
 
-
 .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  place-self: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.placeholder {
+  position: relative;
+  background-color: #ccc;
+  color: #666;
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+  aspect-ratio: 700 / 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card h3 {
-    color: #007bff;
+  font-size: 18px;
+  color: #007bff;
+  margin: 10px 0 5px;
 }
 .card p {
-    color: #555;
-    font-size: 14px;
+  color: #555;
+  font-size: 14px;
 }
 
-
 .footer {
-    margin-top: 40px;
-    padding: 20px;
-    width: 100%;
-    background: #f8f8f8;
-    text-align: center;
-    font-size: 14px;
-    color: #777;
+  margin-top: 20px;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #777;
+  background-color: #f9f9f9;
 }
 
 
 @media (max-width: 900px) {
-    .grid{
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-    }
-    .container{
-        grid-template-columns: 2fr;
-        background-color: #222;
-    }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container {
+    flex-wrap: wrap;
+  }
 }
-@media (max-width: 600px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-    .container{
-        grid-template-columns: 2fr;
-        background-color: #222;
-    }
 
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
