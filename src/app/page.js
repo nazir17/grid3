@@ -2,10 +2,12 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <>
+    
+    <div className={styles.page}>
+      <body></body>
     
       <header>
-        {/* <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Grid Layout</title>
       </header>
 
@@ -128,6 +130,6 @@ export default function Home() {
       <footer className={styles.footer}>
         <p>Copyright © Your Website 2014</p>
       </footer>
-    </>
+    </div>
   );
 }
