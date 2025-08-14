@@ -4,7 +4,7 @@ export default function Home() {
   return (
     
     <div className={styles.page}>
-      <body></body>
+      
     
       <header>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@ export default function Home() {
       
       <nav className={styles.nav}>
         <div className={styles.container}>
-          <div>Layout 1</div>
+          <div>Layout</div>
           <div>About</div>
           <div>Services</div>
           <div>Contact</div>
